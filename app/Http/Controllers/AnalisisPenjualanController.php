@@ -10,7 +10,7 @@ class AnalisisPenjualanController extends Controller
 
     public function index()
     {
-        $analisisPenjualan = AnalisisPenjualan::orderBy('created_at', 'asc')->paginate(10);
+        $analisisPenjualan = AnalisisPenjualan::orderBy('created_at', 'asc')->with('penjualan')->paginate(10);
         return response()->json($analisisPenjualan);
     }
 

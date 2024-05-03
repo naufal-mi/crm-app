@@ -10,7 +10,7 @@ class InteraksiController extends Controller
 
     public function index()
     {
-        $interaksi = Interaksi::orderBy('created_at', 'asc')->paginate(10);
+        $interaksi = Interaksi::orderBy('created_at', 'asc')->with(['pelanggan', 'sales'])->paginate(10);
         return response()->json($interaksi);
     }
 

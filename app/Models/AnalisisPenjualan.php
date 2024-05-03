@@ -13,6 +13,6 @@ class AnalisisPenjualan extends Model
 
     public function penjualan()
     {
-        return $this->belongsToMany(Penjualan::class);
+        return $this->belongsTo(Penjualan::class);
     }
 }

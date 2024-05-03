@@ -13,6 +13,6 @@ class Produk extends Model
 
     public function detailPenjualan()
     {
-        return $this->belongsTo(DetailPenjualan::class);
+        return $this->hasOne(DetailPenjualan::class);
     }
 }

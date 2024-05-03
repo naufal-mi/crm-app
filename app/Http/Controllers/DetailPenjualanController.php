@@ -10,7 +10,7 @@ class DetailPenjualanController extends Controller
 
     public function index()
     {
-        $detailPenjualan = DetailPenjualan::orderBy('created_at', 'asc')->with('penjualan')->paginate(10);
+        $detailPenjualan = DetailPenjualan::orderBy('created_at', 'asc')->with(['produk', 'penjualan'])->paginate(10);
         return response()->json($detailPenjualan);
     }
 

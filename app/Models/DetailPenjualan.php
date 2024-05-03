@@ -18,6 +18,6 @@ class DetailPenjualan extends Model
 
     public function produk()
     {
-        return $this->belongsToMany(Produk::class);
+        return $this->belongsTo(Produk::class);
     }
 }
